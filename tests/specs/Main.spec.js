@@ -9,4 +9,18 @@ describe('<FullHeader />', () => {
         expect(wrapper.find('header')).to.have.length(1);
     });
 
+    it('should have  h1 tag when title passed', () => {
+        const wrapper = shallow(<FullHeader title="TDD"/>);
+        expect(wrapper.find('h1')).to.have.length(1);
+    });
+
+    it('should no have h1 tag when title is not passed', () => {
+        const wrapper = shallow(<FullHeader/>);
+        expect(wrapper.find('h1')).to.have.length(0);
+    });
+
+    it('should have h1 tag with title when title is passed', () => {
+        const wrapper = shallow(<FullHeader title="TDD"/>);
+        expect(wrapper.find('h1').props().children).to.be.equal('TDD');
+    });
 });
