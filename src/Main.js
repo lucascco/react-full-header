@@ -1,9 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const FullHeader = ({ title, subtitle }) => {
+const propsDefault = {
+    bgColor: '#ccc'
+}
+
+const FullHeader = ({ title, subtitle, bgColor }) => {
+    const headerStyles = {
+        backgroundColor: bgColor,
+    };
     const component = (
-        <header>
+        <header style={headerStyles}>
            {title && <h1>{title}</h1>}
            {subtitle && <h2>{subtitle}</h2>}
         </header>
@@ -17,5 +24,6 @@ const propTypes = {
 };
 
 FullHeader.propTypes = propTypes;
+FullHeader.propsDefault = propsDefault;
 
 export default FullHeader;
