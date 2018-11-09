@@ -24,6 +24,6 @@ const propTypes = {
 };
 
 FullHeader.propTypes = propTypes;
-FullHeader.propsDefault = propsDefault;
+FullHeader.defaultProps = propsDefault;
 
 export default FullHeader;

@@ -50,7 +50,12 @@ describe('<FullHeader />', () => {
     context('bgColor', () => {
         it('should have background-color #ccc when is not passed', () => {
             const wrapper = shallow(<FullHeader title="TDD" />);
-            expect(wrapper).to.have.style('background-color').equal('#ccc');
+            expect(wrapper).to.have.style('background-color', '#ccc');
+        });
+
+        it('should have background-color #000 when is passed', () => {
+            const wrapper = shallow(<FullHeader title="TDD" bgColor="#000" />);
+            expect(wrapper).to.have.style('background-color', '#000');
         });
     });
 });
