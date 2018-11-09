@@ -58,4 +58,28 @@ describe('<FullHeader />', () => {
             expect(wrapper).to.have.style('background-color', '#000');
         });
     });
+
+    context('textColor', () => {
+        it('should have color #fff when is not passed', () => {
+            const wrapper = shallow(<FullHeader title="TDD" />);
+            expect(wrapper).to.have.style('color', '#fff');
+        });
+
+        it('should have color #ff000 when is passed', () => {
+            const wrapper = shallow(<FullHeader title="TDD" textColor="#ff000" />);
+            expect(wrapper).to.have.style('color', '#ff000');
+        });
+    });
+
+    context('font', () => {
+        it('should have font sans-serif when is not passed', () => {
+            const wrapper = shallow(<FullHeader title="TDD" />);
+            expect(wrapper).to.have.style('font-family', 'sans-serif');
+        });
+
+        it('should have font open-sans when is passed', () => {
+            const wrapper = shallow(<FullHeader title="TDD" font="open-sans" />);
+            expect(wrapper).to.have.style('font-family', 'open-sans');
+        });
+    });
 });
