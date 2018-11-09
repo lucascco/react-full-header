@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { titleStyle, subtitleStyle, headerStyle, containerStyle } from './Styles';
 
 const propsDefault = {
     bgColor: '#ccc',
@@ -10,6 +11,7 @@ const propsDefault = {
 
 const FullHeader = ({ title, subtitle, bgColor, textColor, font, bgImg }) => {
     const headerStyles = {
+        ...headerStyle,
         backgroundColor: bgColor,
         color: textColor,
         fontFamily: font,
@@ -17,8 +19,10 @@ const FullHeader = ({ title, subtitle, bgColor, textColor, font, bgImg }) => {
     };
     const component = (
         <header style={headerStyles}>
-           {title && <h1>{title}</h1>}
-           {subtitle && <h2>{subtitle}</h2>}
+            <div style={containerStyle}>
+            {title && <h1 style={titleStyle}>{title}</h1>}
+            {subtitle && <h2 style={subtitleStyle}>{subtitle}</h2>}
+            </div>
         </header>
     );
     return component;
