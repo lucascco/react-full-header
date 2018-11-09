@@ -23,7 +23,7 @@ const FullHeader = ({ title, subtitle, bgColor, textColor, font, bgImg, video })
             {title && <h1 style={titleStyle}>{title}</h1>}
             {subtitle && <h2 style={subtitleStyle}>{subtitle}</h2>}
             </div>
-            {video && <video style={videoStyle} autoPlay muted loop src={video}/>}
+            {video && <video style={videoStyle} autoPlay muted loop src={video} />}
         </header>
     );
     return component;
