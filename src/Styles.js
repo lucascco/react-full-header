@@ -22,3 +22,15 @@ export const containerStyle = {
     width: '100%',
     position: 'relative',
 };
+
+export const videoStyle = {
+    position: 'fixed',
+    top: '50%',
+    left: '50%',
+    zIndex: 1,
+    minWidth: '100%',
+    minHeight: '100%',
+    width: 'auto',
+    height: 'auto',
+    transform: 'translate(-50%, -50%)',
+};

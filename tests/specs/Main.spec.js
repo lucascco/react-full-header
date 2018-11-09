@@ -94,4 +94,21 @@ describe('<FullHeader />', () => {
             expect(wrapper).to.have.style('background-image', 'url(bgImg.jpeg)');
         });
     });
+
+    context('video', () => {
+        it('should have a tag video when video passed', () => {
+            const wrapper = shallow(<FullHeader video="video.mp4"/>);
+            expect(wrapper.find('video')).to.have.length(1);
+        });
+
+        it('should dont have a tag video when none passed', () => {
+            const wrapper = shallow(<FullHeader />);
+            expect(wrapper.find('video')).to.have.length(0);
+        });
+
+        it('should have source when video passed', () => {
+            const wrapper = shallow(<FullHeader video="video.mp4"/>);
+            expect(wrapper.find('video').props().src).to.be.equal('video.mp4');
+        });
+    });
 });
