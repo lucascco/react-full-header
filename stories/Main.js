@@ -6,44 +6,44 @@ storiesOf('FullHeader', module)
     .add('with title', () => (
         <FullHeader title="TDD" />
     ))
-    .add('with title and subtitle', () => {
+    .add('with title and subtitle', () => (
         <FullHeader title="TDD" subtitle="Curso de JavaScript com TDD na prática." />
-    })
-    .add('with title, subtitle, bgColor', () => {
+    ))
+    .add('with title, subtitle, bgColor', () => (
         <FullHeader
             title="TDD"
             subtitle="Curso de JavaScript com TDD na prática."
             bgColor="#3299BB"/>
-    })
-    .add('with title, subtitle, bgColor, textColor', () => {
+    ))
+    .add('with title, subtitle, bgColor, textColor', () => (
         <FullHeader
             title="TDD"
             subtitle="Curso de JavaScript com TDD na prática."
             bgColor="#3299BB"
             textColor="#FF990"/>
-    })
-    .add('with title, subtitle, bgColor, textColor, font', () => {
+    ))
+    .add('with title, subtitle, bgColor, textColor, font', () => (
         <FullHeader
             title="TDD"
             subtitle="Curso de JavaScript com TDD na prática."
             bgColor="#3299BB"
             textColor="#FF990"
             font="cursive"/>
-    })
-    .add('with title, subtitle, bgImg', () => {
+    ))
+    .add('with title, subtitle, bgImg', () => (
         <FullHeader
             title="TDD"
             subtitle="Curso de JavaScript com TDD na prática."
             bgColor="#3299BB"
             textColor="#FF990"
             bgImg="https://raw.githubusercontent.com/willianjusten/photo-examples/master/iceland-glacier.jpg"/>
-    })
-    .add('with title, subtitle, video', () => {
+    ))
+    .add('with title, subtitle, video', () => (
         <FullHeader
             title="TDD"
             subtitle="Curso de JavaScript com TDD na prática."
             bgColor="#3299BB"
             textColor="#FF990"
             video="http://callmenick.com/_development/video/full-screen-background-video/media/demo.mp4"/>
-    })
+    ))
 
